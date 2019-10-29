@@ -16,7 +16,8 @@
   ],
   "activationEvents": [
     "onCommand:extension.shape",
-    "onCommand:extension.shapeAndTranslate"
+    "onCommand:extension.shapeAndTranslate",
+    "onUri"
   ],
   "main": "./out/extension.js",
   "contributes": {

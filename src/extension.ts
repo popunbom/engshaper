@@ -98,7 +98,21 @@ export async function activate(context: vscode.ExtensionContext) {
       )
     );
   }
+
+  context.subscriptions.push(
+    vscode.window.registerUriHandler(
+      <vscode.UriHandler>{
+        handleUri(uri: vscode.Uri) {
+          vscode.window.showInformationMessage(
+            `Catch: ${uri}`
+          );
+        }
+      }
+    )
+  );
+
 }
+
 
 
 // this method is called when your extension is deactivated
